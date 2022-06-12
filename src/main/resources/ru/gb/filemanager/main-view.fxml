@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="ru.gb.filemanager.Controller" stylesheets="@styles.css">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выйти из программы" onAction="#menuItemFileExitAction"/>
+        </Menu>
+    </MenuBar>
+    <TextField fx:id="pathField" editable="false" focusTraversable="false"/>
+    <ListView fx:id="fileList" onMouseClicked="#filesListClicked" VBox.vgrow="ALWAYS"/>
+    <HBox spacing="5">
+        <Button maxWidth="Infinity" text="Просмотр" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" text="Копирование" HBox.hgrow="ALWAYS" onAction="#copyAction"/>
+        <Button maxWidth="Infinity" text="Перемещение" HBox.hgrow="ALWAYS" onAction="#moveAction"/>
+        <Button maxWidth="Infinity" text="Удаление" HBox.hgrow="ALWAYS" onAction="#deleteAction"/>
+        <padding>
+            <Insets bottom="5" left="5" right="5" top="5"/>
+        </padding>
+    </HBox>
+</VBox>
